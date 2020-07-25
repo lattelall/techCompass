@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>記事一覧</title>
+    </head>
+    <body>
+        <table>
+            <tr th:each="article : ${articles}">
+                <td><a th:href="@{article/{article_id}(article_id=${article['article_id']})}" th:text="${article.title}"></a></td>
+            </tr>
+        </table>
+    </body>
+</html>

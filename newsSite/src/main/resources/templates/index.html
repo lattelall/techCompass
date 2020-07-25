@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TOPページ</title>
+    </head>
+    <body>
+        ここがTOPページです！<br />
+        <div th:unless="${username}">
+            <form action="#" th:action="@{/login}" method="get">
+                <input type="submit" value="ログイン" />
+            </form>
+            <!-- ここから -->
+            <form action="#" th:action="@{/signup}" method="get">
+            	<input type="submit" value="アカウント登録" />
+			</form>
+			<!-- ここまで -->
+        </div>
+        <div th:if="${username}">
+            [[${username}]]さん&nbsp;
+            <form action="#" th:action="@{/logout}" method="post">
+                <input type="submit" value="ログアウト" />
+            </form>
+        </div>
+    </body>
+</html>

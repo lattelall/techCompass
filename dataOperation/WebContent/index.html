@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>想定画面01</title>
+	</head>
+	<body >
+		<form action="Result" method="POST"><!-- Resultにフォームの入力内容を飛ばす -->
+			<font face="ＭＳ Ｐ明朝,ＭＳ 明朝" size="4"><B><!-- フォントの調整 -->
+				<input type="text" name="name"><br>
+				性別:男<input type="radio" name="sex" value="male">
+				女<input type="radio" name="sex" value="female"><br>
+				お問い合わせ種類<br>
+				<select name="question">
+					<option value="aboutProduct">１.製品について</option>
+					<option value="badDefect">２.不具合やクレーム</option>
+					<option value="customerSuport">３.アフターサポート</option>
+				</select><br>
+				お問い合わせ内容<br>
+				<textarea name="textArea" cols="50" rows="5" placeholder="	150字以内で入力してください"></textarea><br>
+				<input type="submit" name="submitBtn" value="送信">
+			</B></font>
+		</form>
+	</body>
+</html>
